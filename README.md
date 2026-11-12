@@ -1,5 +1,7 @@
 # 420 Taper
 
+![420 Taper preview: Regular alphabet, Italic code sample, and Share Tech Mono vs 420 Taper](docs/preview.png)
+
 A monospaced coding font: Share Tech Mono (via the Nerd Fonts patch, "Shure Tech Mono Nerd Font Mono")
 whose stems narrow toward their free ends, plus an Italic that is the same tapered design slanted 10°.
 Nerd Font icons, box drawing and Powerline separators stay square and upright. Latin only (no Thai).
