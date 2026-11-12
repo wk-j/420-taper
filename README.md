@@ -4,8 +4,6 @@ A monospaced coding font: Share Tech Mono (via the Nerd Fonts patch, "Shure Tech
 whose stems narrow toward their free ends, plus an Italic that is the same tapered design slanted 10°.
 Nerd Font icons, box drawing and Powerline separators stay square and upright. Latin only (no Thai).
 
-Derived from the `shure-tech-mono-taper` preset in `~/Source/font-lab`.
-
 ## Build
 
 Needs [uv](https://docs.astral.sh/uv/) (installs Python 3.11+ and fontTools from the script's inline metadata).
