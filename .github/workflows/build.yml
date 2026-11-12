@@ -1,0 +1,43 @@
+name: Build fonts
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Build 420 Taper
+        run: uv run build.py 420-taper.toml
+
+      - name: Package
+        run: |
+          mkdir -p package/420Taper
+          cp dist/420Taper/*.ttf OFL.txt README.md package/420Taper/
+          cd package && zip -r ../420Taper.zip 420Taper
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 420Taper
+          path: package/420Taper
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            420Taper.zip
+            dist/420Taper/*.ttf
+          generate_release_notes: true

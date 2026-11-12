@@ -1,0 +1,27 @@
+# 420 Taper: Shure Tech Mono Nerd Font Mono (Share Tech Mono plus Nerd Font icons) whose stems
+# narrow toward their free ends, with an Italic that is the same tapered design slanted 10°.
+# Based on font-lab's shure-tech-mono-taper.toml. No Thai, so the line box stays the source's.
+# Share Tech Mono is SIL OFL 1.1 with Reserved Font Name 'Share': the family name must not contain "Share".
+
+family = "420 Taper"
+# Static font, Regular only. From https://github.com/ryanoasis/nerd-fonts/releases (ShareTechMono.zip).
+source = "sources/ShureTechMonoNerdFontMono-Regular.ttf"
+
+[styles]
+"Regular" = {}
+"Italic" = {}
+
+[taper]
+# Letters, digits and punctuation; icons, box drawing and Powerline separators stay square.
+unicodes = ["0021-007E", "00A1-00FF", "0100-024F", "2010-205E"]
+# Share of a stem end's width taken off (0.35 subtle, 0.65 close to pointed).
+amount = 0.5
+# Font units over which a stem's sides curve in toward its end.
+length = 200
+
+[oblique]
+styles = ["Italic"]
+# Degrees; negative leans right.
+angle = -10
+# "_" (005F) stays upright: sheared, its rule would shift into the previous cell.
+unicodes = ["0021-005E", "0060-007E", "00A1-024F", "02B0-03FF", "2010-205E", "20A0-20CF", "2100-214F", "2200-22FF"]
