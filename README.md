@@ -6,6 +6,14 @@ A monospaced coding font: Share Tech Mono (via the Nerd Fonts patch, "Shure Tech
 whose stems narrow toward their free ends, plus an Italic that is the same tapered design slanted 10°.
 Nerd Font icons, box drawing and Powerline separators stay square and upright. Latin only (no Thai).
 
+## Install
+
+```sh
+brew install --cask wk-j/tap/font-420-taper
+```
+
+Or download `420Taper.zip` from the [latest release](https://github.com/wk-j/420-taper/releases/latest).
+
 ## Build
 
 Needs [uv](https://docs.astral.sh/uv/) (installs Python 3.11+ and fontTools from the script's inline metadata).
