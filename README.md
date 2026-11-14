@@ -47,3 +47,8 @@ Push a tag such as `v1.0.0` to publish a Release with `420Taper.zip` and the `.t
 ```sh
 git tag v1.0.0 && git push origin v1.0.0
 ```
+
+The same tag run also bumps `version` and `sha256` in the
+[`font-420-taper` cask](https://github.com/wk-j/homebrew-tap/blob/main/Casks/font-420-taper.rb).
+That needs a repository secret `HOMEBREW_TAP_TOKEN`: a fine-grained personal access token with
+**Contents: Read and write** on `wk-j/homebrew-tap` only. Without it the step is skipped with a warning.
